@@ -1,5 +1,6 @@
 ﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using irs.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
+using irs.API.DueDiligence.Domain.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace irs.API.Shared.Infrastructure.Persistence.EFC.Configuration;
@@ -17,9 +18,18 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
     {
         base.OnModelCreating(builder);
 
-        // Publishing Context
+        builder.Entity<Vendor>().HasKey(v => v.Id);
 
-         
+        builder.Entity<Vendor>().Property(v => v.BusinessName).IsRequired();
+        builder.Entity<Vendor>().Property(v => v.TradeName).IsRequired();
+        builder.Entity<Vendor>().Property(v => v.TaxId).IsRequired().HasMaxLength(11);
+        builder.Entity<Vendor>().Property(v => v.PhoneNumber).IsRequired();
+        builder.Entity<Vendor>().Property(v => v.Email).IsRequired();
+        builder.Entity<Vendor>().Property(v => v.Website).IsRequired();
+        builder.Entity<Vendor>().Property(v => v.Address).IsRequired();
+        builder.Entity<Vendor>().Property(v => v.Country).IsRequired();
+        builder.Entity<Vendor>().Property(v => v.AnnualBilling).IsRequired().HasColumnType("decimal(18,2)");
+
         // Apply SnakeCase Naming Convention
         builder.UseSnakeCaseWithPluralizedTableNamingConvention();
     }

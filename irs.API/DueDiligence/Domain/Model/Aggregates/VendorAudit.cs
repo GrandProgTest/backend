@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using EntityFrameworkCore.CreatedUpdatedDate.Contracts;
 
-namespace irs.API.Vendors.Domain.Model;
+namespace irs.API.DueDiligence.Domain.Model;
 
 public partial class Vendor: IEntityWithCreatedUpdatedDate
 {
