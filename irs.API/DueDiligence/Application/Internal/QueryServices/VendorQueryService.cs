@@ -11,4 +11,8 @@ public class VendorQueryService(IVendorRepository vendorRepository): IVendorQuer
     {
         return await vendorRepository.FindByIdAsync(query.Id);
     }
+    public async Task<IEnumerable<Vendor>> Handle(GetAllVendorsQuery query)
+    {
+        return await vendorRepository.ListAsync();
+    }
 }

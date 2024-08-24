@@ -1,6 +1,7 @@
 ﻿using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using irs.API.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using irs.API.DueDiligence.Domain.Model;
+using irs.API.IAM.Domain.Model.Aggregates;
 using Microsoft.EntityFrameworkCore;
 
 namespace irs.API.Shared.Infrastructure.Persistence.EFC.Configuration;
@@ -30,6 +31,12 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.Entity<Vendor>().Property(v => v.Country).IsRequired();
         builder.Entity<Vendor>().Property(v => v.AnnualBilling).IsRequired().HasColumnType("decimal(18,2)");
 
+        
+        // IAM Context
+        builder.Entity<User>().HasKey(u => u.Id);
+        builder.Entity<User>().Property(u => u.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<User>().Property(u => u.Username).IsRequired();
+        builder.Entity<User>().Property(u => u.PasswordHash).IsRequired();
         // Apply SnakeCase Naming Convention
         builder.UseSnakeCaseWithPluralizedTableNamingConvention();
     }

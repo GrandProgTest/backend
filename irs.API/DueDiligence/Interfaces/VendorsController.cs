@@ -49,4 +49,13 @@ public class VendorsController (IVendorQueryService vendorQueryService,
         var resource = VendorResourceFromEntityAssembler.ToResourceFromEntity(vendor);
         return Ok(resource);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAllVendors()
+    {
+        var getAllVendorsQuery = new GetAllVendorsQuery();
+        var vendors = await vendorQueryService.Handle(getAllVendorsQuery);
+        var resources = vendors.Select(VendorResourceFromEntityAssembler.ToResourceFromEntity);
+        return Ok(resources);
+    }
 }
