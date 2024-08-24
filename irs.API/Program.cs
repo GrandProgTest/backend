@@ -142,7 +142,6 @@ app.UseCors("AllowedAllPolicy");
 
 // Add Authorization Middleware to the Request Pipeline
 
-app.UseRequestAuthorization();
 
 app.UseHttpsRedirection();
 
