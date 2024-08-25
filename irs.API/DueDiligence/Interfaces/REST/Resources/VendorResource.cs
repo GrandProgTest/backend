@@ -2,10 +2,11 @@
 
 public record VendorResource(int Id,string BusinessName,
     string TradeName,
-    long TaxId,
-    long PhoneNumber,
+    string TaxId,
+    string PhoneNumber,
     string Email,
     string Website,
     string Address,
     string Country,
-    decimal AnnualBilling);
+    decimal AnnualBilling,
+    DateTimeOffset? UpdatedDate);

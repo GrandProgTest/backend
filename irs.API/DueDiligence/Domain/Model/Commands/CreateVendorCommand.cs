@@ -2,8 +2,8 @@
 
 public record CreateVendorCommand(string BusinessName,
     string TradeName,
-    long TaxId,
-    long PhoneNumber,
+    string TaxId,
+    string PhoneNumber,
     string Email,
     string Website,
     string Address,

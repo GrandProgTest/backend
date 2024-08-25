@@ -7,8 +7,8 @@ public partial class Vendor
     public int Id { get; set; }
     public string BusinessName { get; set; }
     public string TradeName { get; set; }
-    public long TaxId { get; set; }
-    public long PhoneNumber { get; set; }
+    public string TaxId { get; set; }
+    public string PhoneNumber { get; set; }
     public string Email { get; set; }
     public string Website { get; set; }
     public string Address { get; set; }

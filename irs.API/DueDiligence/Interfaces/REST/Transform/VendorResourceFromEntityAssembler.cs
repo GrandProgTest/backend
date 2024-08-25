@@ -16,6 +16,7 @@ public static class VendorResourceFromEntityAssembler
             entity.Website,
             entity.Address,
             entity.Country,
-            entity.AnnualBilling);
+            entity.AnnualBilling,
+            entity.UpdatedDate);
     }
 }
