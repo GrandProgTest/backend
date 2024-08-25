@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace irs.API.DueDiligence.Application.Internal.CommandServices;
 
+/// <summary>
+/// Service to handle vendor-related commands.
+/// </summary>
 public class VendorCommandService : IVendorCommandService
 {
     private readonly IVendorRepository vendorRepository;
@@ -20,6 +23,12 @@ public class VendorCommandService : IVendorCommandService
         this.unitOfWork = unitOfWork;
     }
 
+    /// <summary>
+    /// Handles the creation of a new vendor.
+    /// </summary>
+    /// <param name="command">The command containing vendor creation details.</param>
+    /// <returns>The created vendor.</returns>
+    /// <exception cref="Exception">Thrown when the country is invalid or an error occurs during creation.</exception>
     public async Task<Vendor> Handle(CreateVendorCommand command)
     {
         if (!Enum.TryParse<ECountry>(command.Country, out var country))
@@ -40,6 +49,11 @@ public class VendorCommandService : IVendorCommandService
         }
     }
 
+    /// <summary>
+    /// Handles the deletion of a vendor.
+    /// </summary>
+    /// <param name="command">The command containing vendor deletion details.</param>
+    /// <exception cref="Exception">Thrown when the vendor is not found or an error occurs during deletion.</exception>
     public async Task Handle(DeleteVendorCommand command)
     {
         var vendor = await vendorRepository.FindByIdAsync(command.VendorId);
@@ -58,6 +72,12 @@ public class VendorCommandService : IVendorCommandService
         }
     }
 
+    /// <summary>
+    /// Handles the update of a vendor.
+    /// </summary>
+    /// <param name="command">The command containing vendor update details.</param>
+    /// <returns>The updated vendor.</returns>
+    /// <exception cref="Exception">Thrown when the country is invalid, the vendor is not found, or an error occurs during update.</exception>
     public async Task<Vendor> Handle(UpdateVendorCommand command)
     {
         if (!Enum.TryParse<ECountry>(command.Country, out var country))

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("irs.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4311cbf1d90d3b05b7fe331026b2d0595836559b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1525975e58c3da5c0d1e9b8c82abe9450f08191a")]
 [assembly: System.Reflection.AssemblyProductAttribute("irs.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("irs.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
