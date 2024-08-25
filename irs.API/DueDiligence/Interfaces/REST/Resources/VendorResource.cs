@@ -1,6 +1,8 @@
 ﻿namespace irs.API.DueDiligence.Interfaces.REST.Resources;
 
-public record VendorResource(int Id,string BusinessName,
+public record VendorResource(
+    int Id,
+    string BusinessName,
     string TradeName,
     string TaxId,
     string PhoneNumber,
