@@ -1,0 +1,149 @@
+[
+  {
+    "ContainingType": "irs.API.IAM.Interfaces.REST.AuthenticationController",
+    "Method": "SignIn",
+    "RelativePath": "api/v1/authentication/sign-in",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resource",
+        "Type": "irs.API.IAM.Interfaces.REST.Resources.SignInResource",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.IAM.Interfaces.REST.AuthenticationController",
+    "Method": "SignUp",
+    "RelativePath": "api/v1/authentication/sign-up",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resource",
+        "Type": "irs.API.IAM.Interfaces.REST.Resources.SignUpResource",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.Controllers.CountryController",
+    "Method": "GetCountries",
+    "RelativePath": "api/v1/country",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.IAM.Interfaces.REST.UsersController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/v1/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.IAM.Interfaces.REST.UsersController",
+    "Method": "GetUserById",
+    "RelativePath": "api/v1/users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.DueDiligence.Interfaces.VendorsController",
+    "Method": "CreateVendor",
+    "RelativePath": "api/v1/vendors",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resource",
+        "Type": "irs.API.DueDiligence.Interfaces.REST.Resources.CreateVendorResource",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.DueDiligence.Interfaces.VendorsController",
+    "Method": "GetAllVendors",
+    "RelativePath": "api/v1/vendors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.DueDiligence.Interfaces.VendorsController",
+    "Method": "GetVendorById",
+    "RelativePath": "api/v1/vendors/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.DueDiligence.Interfaces.VendorsController",
+    "Method": "DeleteVendor",
+    "RelativePath": "api/v1/vendors/{vendorId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "irs.API.DueDiligence.Interfaces.VendorsController",
+    "Method": "UpdateVendor",
+    "RelativePath": "api/v1/vendors/{vendorId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateVendorResource",
+        "Type": "irs.API.DueDiligence.Interfaces.REST.Resources.UpdateVendorResource",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
